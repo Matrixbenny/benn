@@ -43,14 +43,21 @@ foreach ($months as $month) {
     While loop
 </h4>
 <?php
-$init = 2015;
-while ($init < 2030){
-    print "<option value='$init'>$init</option>";
-    $init++;
-}
+// $init = 2015;
+// while ($init < 2030){
+//     print "<option value='$init'>$init</option>";
+//     $init++;
+// }
 ?>
 <form action="">
     <select name="" id="">
     <option value="">--Months--</option>
+    <?php
+        $init = 2015;
+        while ($init < 2030){
+            print "<option value=''>$init</option>";
+            $init++;
+        }
+?>
     </select>
 </form>
