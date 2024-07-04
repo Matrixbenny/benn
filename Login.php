@@ -1,89 +1,54 @@
-<!DOCTYPE html>
-<html>
+<?php
+// login.php
 
-<head>
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Login Form</title>
-</head>
+// Configuration
+$db_host = 'localhost';
+$db_username = 'your_username';
+$db_password = 'your_password';
+$db_name = 'your_database';
 
-<body>
-    <div>
-        <header>
-            <details>
-                <summary class="dropdown-toggle"><span class="menu-icon"></span> Menu</summary>
-                <header>
-                    <img src="images/LOGO.png" alt="Header Image" class="header-image">
-                    <!-- Your header content here -->
-                </header>
-                <nav>
-                    <audio id="myAudio" controls loop>
-                        <source src="SL - Berlin (Lyrics).mp3">
-                    </audio>
+// Create connection
+$conn = new mysqli($db_host, $db_username, $db_password, $db_name);
 
-                    <style>
-                        #myAudio {
-                            background-color: rgb(0, 91, 255);
-                            width: 200px;
-                            height: 50px;
-                        }
-                    </style>
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-                    <div style="position: relative;">
-                        <button style="background-color: black;"><a href="index.html" style="color: white;">Home</a>
-                        </button>|
-                        <button style="background-color: black;"><a href="Games.html" style="color: white;">Games</a>
-                        </button>|<button style="background-color: black;"> <a href="Movies.html"
-                                style="color: white;">movies</a>
-                        </button>| <button style="background-color: black;"><a href="Tvshows.html"
-                                style="color: white;">Tvshows</a>
-                        </button>
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 
-                        <button
-                            style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right:  50px;"><a
-                                href="Register.html" style="color: yellow;">Register</a>
-                        </button>|
+    // Query to retrieve user data
+    $query = "SELECT * FROM users WHERE email = '$email'";
+    $result = $conn->query($query);
 
-                        <button
-                            style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 0;"><a
-                                href="Login.html" style="color: yellow;">Login</a></button>
+    if ($result->num_rows > 0) {
+        $user_data = $result->fetch_assoc();
+        $hashed_password = $user_data["password"];
 
-                        <button class="email"
-                            style="color: mediumslateblue;background-color: black;border-radius:20px; align-content: end;"><a
-                                href="mailto:Officialbillionaire.ke@gmail.com ">Email for help</a>
-                        </button>
-                    </div>
-                </nav>
-        </header>
-        <a href="index.html" style="font-size: 200%;"> 🔙</a>
-        <h1 style="padding: 10;color: olive;">👋Welcome back!</h1>
-        <h1>Login</h1>
-        <form action="/login" method="post">
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
+        // Verify password
+        if (password_verify($password, $hashed_password)) {
+            // Login successful, start session and redirect to dashboard
+            session_start();
+            $_SESSION["email"] = $email;
+            $_SESSION["username"] = $user_data["username"];
+            header("Location: dashboard.php");
+            exit;
+        } else {
+            $error = "Invalid password";
+        }
+    } else {
+        $error = "Email not found";
+    }
+}
 
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required><br>
-            <input type="checkbox" id="checkbox" onclick="showPassword()">Show Password</input><br>
+// Close connection
+$conn->close();
+?>
 
-            <input type="submit" value="Login">
-        </form>
-        <p>
-            <a href="forgot password.html">Forgot Password?</a>
-        </p>
-        <br>
-        <footer>
-            <div class="links-container">
-
-                <a href="helpcentre.html">Help centre</a>
-                <br>
-                <a href="carrers.html">Carrers</a>
-                <br>
-                <a href="termsofuse.html">Terms of use</a>
-                <br>
-                <a href="privacypolicy.html">Privacy Policy</a>
-            </div>
-        </footer>>
-
-</body>
-
-</html>
+<!-- Display error message if any -->
+<?php if (isset($error)) { ?>
+    <p style="color: red;"><?php echo $error; ?></p>
+<?php } ?>
