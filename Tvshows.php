@@ -1,3 +1,8 @@
+<?php
+// PHP code to generate the HTML
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -5,7 +10,7 @@
     <link rel="stylesheet" href="CSS/style.css">
 
     <title style="font-style: unset;
-    text-decoration: blue;">BENNTORRENT/Tvshows🎬</title>
+    text-decoration: blue;">BENNTORRENT/Tvshows&#x1F3A5;</title>
 </head>
 
 <body>
@@ -58,16 +63,16 @@
                 </nav>
         </header>
         <br>
-        <a href="index.html" style="font-size: 200%;"> 🔙</a>
+        <a href="index.html" style="font-size: 200%;"> &#x1F448;</a>
         <h1 style="color: darkgreen;">Tvshows</h1>
         <img src="images/tv.jpg" <br>
-        <h2 style="color: aqua;">Enjoy your next captivating Tvshows journey ◉‿◉</h2>
-        <h2 style="color: cadetblue;">New Releases 🆕 </h2>
+        <h2 style="color: aqua;">Enjoy your next captivating Tvshows journey &#x25C9;&#x1F648;</h2>
+        <h2 style="color: cadetblue;">New Releases &#x1F196;</h2>
         <img src="images/a1.webp" /> <img src="images/a2.webp" /><img src="images/a3.webp" /><img
             src="images/a4.webp" /><img src="images/a5.webp" /><img src="images/a6.webp" /><img
             src="images/a7.webp" /><img src="images/a8.webp" /><img src="images/a10.webp" /><img src="images/a9.webp" />
         <br>
-        <h2 style="color: cadetblue;">Returning shows 📺🍿</h2>
+        <h2 style="color: cadetblue;">Returning shows &#x1F4FA;&#x1F37F;</h2>
         <img src="images/a14.webp" /><img src="images/a1l.webp" /><img src="images/a12.webp" /><img
             src="images/a13.webp" /><img src="images/a15.webp" /><img src="images/a16.webp" /><img
             src="images/a17.webp" />
@@ -75,28 +80,4 @@
         <img src="images/a20.webp" /><img src="images/a21.webp" /><img src="images/a22.webp" /><img
             src="images/a22.webp" /><img src="images/a23.webp" /><img src="images/a24.webp" /><img
             src="images/a25.webp" /><img src="images/a26.webp" />
-        <br>
-
-        <h2>
-            <b>
-                <center>
-                    OVERVIEW
-                </center>
-            </b>
-        </h2>
-        <footer>
-            <div class="links-container">
-
-                <a href="helpcentre.html">Help centre</a>
-                <br>
-                <a href="carrers.html">Carrers</a>
-                <br>
-                <a href="termsofuse.html">Terms of use</a>
-                <br>
-                <a href="privacypolicy.html">Privacy Policy</a>
-            </div>
-        </footer>
-
-</body>
-
-</html>
+        <
