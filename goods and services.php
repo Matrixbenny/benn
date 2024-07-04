@@ -1,67 +1,16 @@
-<!DOCTYPE html>
-<html>
+<?php
+  // Check if the form has been submitted
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form data
+    $movie = $_POST["movie"];
+    $tvshow = $_POST["tvshow"];
+    $game = $_POST["game"];
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <style>
-        form {
-            width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f2f2f2;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-
-<body>
-    <a href="index.html" style="font-size: 200%;"> 🔙</a>
-    <form action="/submit" method="post">
-        <label for="movie">Movie:</label>
-        <input type="text" id="movie" name="movie" required>
-
-        <label for="tvshow">TV Show:</label>
-        <input type="text" id="tvshow" name="tvshow" required>
-
-        <label for="game">Game:</label>
-        <input type="text" id="game" name="game" required>
-
-        <input type="submit" value="Submit">
-    </form>
-</body>
-
-</html>
+    // You can now process the form data, e.g., store it in a database
+    // For demonstration purposes, let's just echo the data back
+    echo "You submitted:<br>";
+    echo "Movie: $movie<br>";
+    echo "TV Show: $tvshow<br>";
+    echo "Game: $game<br>";
+  }
+?>
