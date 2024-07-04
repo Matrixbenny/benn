@@ -1,14 +1,17 @@
-<!DOCTYPE html>
+<?php
+// index.php
+
+// Header section
+?><!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8" />
 
-
     <link rel="" type="image/jpg" href="images/Games.jpg">
     <link rel="stylesheet" href="CSS/style.css">
     <title style="font-style: unset;
-    text-decoration: blue;">BENNYTORRENT🎮🕹️👾</title>
+    text-decoration: blue;">BENNYTORRENT</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -42,20 +45,20 @@
             </style>
 
             <div style="position: relative;">
-                <button style="background-color: black;"><a href="index.html" style="color: white;">Home</a>
+                <button style="background-color: black;"><a href="index.php" style="color: white;">Home</a>
                 </button>|
-                <button style="background-color: black;"><a href="Games.html" style="color: white;">Games</a>
-                </button>|<button style="background-color: black;"> <a href="Movies.html"
+                <button style="background-color: black;"><a href="Games.php" style="color: white;">Games</a>
+                </button>|<button style="background-color: black;"> <a href="Movies.php"
                         style="color: white;">movies</a>
             </div>
             </div>
-            </button>| <button style="background-color: black;"><a href="Tvshows.html" style="color: white;">Tvshows</a>
+            </button>| <button style="background-color: black;"><a href="Tvshows.php" style="color: white;">Tvshows</a>
             </button>
             <button style="background-color: darkmagenta; border-radius:10px;position: absolute;top: 0;right:  50px;"><a
-                    href="Register.html" style="color: yellow;">Signup</a>
+                    href="Register.php" style="color: yellow;">Signup</a>
             </button>|
             <button style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 0;"><a
-                    href="Login.html" style="color: yellow;">Signin</a></button>
+                    href="Login.php" style="color: yellow;">Signin</a></button>
 
             <button class="email"
                 style="color: mediumslateblue;background-color: black;border-radius:20px; align-content: end;"><a
@@ -108,29 +111,4 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="contactus.html">contact us</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-    </footer>
-</body>
-
-</html>
+                    <li class="nav-item active
