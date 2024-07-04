@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<?php
+// index.php
+
+// Header section
+?><!DOCTYPE html>
 <html>
 
 <head>
     <title>My Website</title>
     <meta name="description" content="This is my website">
     <link rel="stylesheet" href="CSS/style.css">
-
 </head>
 
 <body>
@@ -31,40 +34,36 @@
                     </style>
 
                     <div style="position: relative;">
-                        <button style="background-color: black;"><a href="index.html" style="color: white;">Home</a>
-                        </button>|
-                        <button style="background-color: black;"><a href="Games.html" style="color: white;">Games</a>
-                        </button>|<button style="background-color: black;"> <a href="Movies.html"
-                                style="color: white;">movies</a>
-                        </button>| <button style="background-color: black;"><a href="Tvshows.html"
-                                style="color: white;">Tvshows</a>
-                        </button>
-
-                        <button
-                            style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right:  50px;"><a
-                                href="Register.html" style="color: yellow;">Signup</a>
-                        </button>|
-
-                        <button
-                            style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 0;"><a
-                                href="Login.html" style="color: yellow;">Login</a></button>
-
-                        <button class="email"
-                            style="color: mediumslateblue;background-color: black;border-radius:20px; align-content: end;"><a
-                                href="mailto:Officialbillionaire.ke@gmail.com ">Email for help</a>
-                        </button>
+                        <?php
+                        // Navigation menu
+                        if (isset($_SESSION['logged_in'])) {
+                            echo '<button style="background-color: black;"><a href="index.php" style="color: white;">Home</a></button>|';
+                            echo '<button style="background-color: black;"><a href="Games.php" style="color: white;">Games</a></button>|';
+                            echo '<button style="background-color: black;"><a href="Movies.php" style="color: white;">Movies</a></button>|';
+                            echo '<button style="background-color: black;"><a href="Tvshows.php" style="color: white;">Tvshows</a></button>|';
+                            echo '<button style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 50px;"><a href="Logout.php" style="color: yellow;">Logout</a></button>|';
+                        } else {
+                            echo '<button style="background-color: black;"><a href="index.php" style="color: white;">Home</a></button>|';
+                            echo '<button style="background-color: black;"><a href="Games.php" style="color: white;">Games</a></button>|';
+                            echo '<button style="background-color: black;"><a href="Movies.php" style="color: white;">Movies</a></button>|';
+                            echo '<button style="background-color: black;"><a href="Tvshows.php" style="color: white;">Tvshows</a></button>|';
+                            echo '<button style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 50px;"><a href="Register.php" style="color: yellow;">Signup</a></button>|';
+                            echo '<button style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 0;"><a href="Login.php" style="color: yellow;">Login</a></button>|';
+                        }
+                       ?>
+                        <button class="email" style="color: mediumslateblue;background-color: black;border-radius:20px; align-content: end;"><a href="mailto:Officialbillionaire.ke@gmail.com ">Email for help</a></button>
                     </div>
                 </nav>
         </header>
         <nav>
             <ul>
-                <li><a href="/faq.html">FAQ</a></li>
-                <li><a href="/rating-reviews.html">Rating and Reviews</a></li>
-                <li><a href="/metascores.html">Metascores</a></li>
-                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="faq.php">FAQ</a></li>
+                <li><a href="rating-reviews.php">Rating and Reviews</a></li>
+                <li><a href="metascores.php">Metascores</a></li>
+                <li><a href="privacy-policy.php">Privacy Policy</a></li>
             </ul>
         </nav>
-        <a href="index.html" style="font-size: 200%;"> 🔙</a>
+        <a href="index.php" style="font-size: 200%;"> 🔙</a>
         <h1>Welcome to My Website</h1>
         <main>
             <!-- Website content goes here -->
@@ -72,16 +71,20 @@
 
         <footer>
             <div class="links-container">
-
-                <a href="helpcentre.html">Help centre</a>
+                <a href="helpcentre.php">Help centre</a>
                 <br>
-                <a href="carrers.html">Carrers</a>
+                <a href="carrers.php">Carrers</a>
                 <br>
-                <a href="termsofuse.html">Terms of use</a>
+                <a href="termsofuse.php">Terms of use</a>
                 <br>
-                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="privacypolicy.php">Privacy Policy</a>
             </div>
         </footer>
+    </div>
 </body>
 
 </html>
+
+<?php
+// Footer section
+?>
