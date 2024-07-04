@@ -1,10 +1,50 @@
+<?php
+// Connect to database
+$conn = mysqli_connect("localhost", "username", "password", "database");
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: ". mysqli_connect_error());
+}
+
+// Register and Login functionality
+if (isset($_POST['register'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $query = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+    mysqli_query($conn, $query);
+}
+
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        // Login successful, redirect to dashboard
+        header("Location: dashboard.php");
+        exit;
+    } else {
+        // Login failed, display error message
+        $error = "Invalid username or password";
+    }
+}
+
+// HTML code
+?>
+
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="CSS/style.css">
     <title style="font-style: unset;
-    text-decoration: blue;">BENNTORRENT/Games🎮🕹️👾</title>
+    text-decoration: blue;">BENNTORRENT/Games&#x1F3AE;&#x1F579;&#x1F47C;</title>
 </head>
 
 <body>
@@ -30,23 +70,34 @@
                     </style>
 
                     <div style="position: relative;">
-                        <button style="background-color: black;"><a href="index.html" style="color: white;">Home</a>
+                        <button style="background-color: black;"><a href="index.php" style="color: white;">Home</a>
                         </button>|
-                        <button style="background-color: black;"><a href="Games.html" style="color: white;">Games</a>
-                        </button>|<button style="background-color: black;"> <a href="Movies.html"
+                        <button style="background-color: black;"><a href="Games.php" style="color: white;">Games</a>
+                        </button>|<button style="background-color: black;"> <a href="Movies.php"
                                 style="color: white;">movies</a>
-                        </button>| <button style="background-color: black;"><a href="Tvshows.html"
+                        </button>| <button style="background-color: black;"><a href="Tvshows.php"
                                 style="color: white;">Tvshows</a>
                         </button>
 
-                        <button
-                            style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right:  50px;"><a
-                                href="Register.html" style="color: yellow;">Register</a>
-                        </button>|
+                        <?php if (!isset($_SESSION['username'])) {?>
+                            <button
+                                style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right:  50px;"><a
+                                    href="Register.php" style="color: yellow;">Register</a>
+                            </button>|
 
-                        <button
-                            style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 0;"><a
-                                href="Login.html" style="color: yellow;">Login</a></button>
+                            <button
+                                style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 0;"><a
+                                    href="Login.php" style="color: yellow;">Login</a></button>
+                        <?php } else {?>
+                            <button
+                                style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right:  50px;"><a
+                                    href="profile.php" style="color: yellow;">Profile</a>
+                            </button>|
+
+                            <button
+                                style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 0;"><a
+                                    href="logout.php" style="color: yellow;">Logout</a></button>
+                        <?php }?>
 
                         <button class="email"
                             style="color: mediumslateblue;background-color: black;border-radius:20px; align-content: end;"><a
@@ -55,43 +106,8 @@
                     </div>
                 </nav>
         </header>
-        <a href="index.html" style="font-size: 200%;"> 🔙</a>
+        <a href="index.php" style="font-size: 200%;"> &#x1F448;</a>
         <h1 style="color: darkgreen;">GAMES</h1>
         <img src="images/Games.jpg" <br>
-        <h2 style="color: aqua;">Enjoy your next gaming journey ◉‿◉</h2>
-        <h2 style="color: cadetblue;">New Releases 🆕 </h2>
-        <img src="images/1.webp" /> <img src="images/2.webp" /><img src="images/3.webp" /><img src="images/4.webp" />
-        <img src="images/8.webp" /><img src="images/9.webp" />
-        <br>
-        <h2 style="color: cadetblue;">Upcoming games ୧⍤⃝🌻</h2>
-        <img src="images/6.webp" /><img src="images/7.webp" /><img src="images/10.webp" /><img
-            src="images/11.webp" /><img src="images/12.webp" />
-        <h2 style="color: cadetblue;">Best games on</h2><a href="PS5.html">PS5</a>| <a href="PC.html">PC</a>| <a
-            href="Nintendoswitch.html">Nintendoswitch</a>
-        <h2 style="color: cadetblue;size: 4cm;">New on playstation plus</h2>
-        <img src="images/13.webp" /><img src="images/14.webp" /><img src="images/15.webp" /><img
-            src="images/16.webp" /><img src="images/17.webp" /><img src="images/18.webp" />
-        <br>
-        <h2 style="color: cadetblue;size: 4cm;">New on Xbox Game pass</h2>
-        <img src="images/19.webp" /><img src="images/20.webp" /><img src="images/21.webp" /><img
-            src="images/22.webp" /><img src="images/23.webp" /><img src="images/24.webp" />
-        <br>
-        <h2>
-            <center>OVERVIEW</center>
-        </h2>
-
-        <footer>
-            <div class="links-container">
-
-                <a href="helpcentre.html">Help centre</a>
-                <br>
-                <a href="carrers.html">Carrers</a>
-                <br>
-                <a href="termsofuse.html">Terms of use</a>
-                <br>
-                <a href="privacypolicy.html">Privacy Policy</a>
-            </div>
-        </footer>
-</body>
-
-</html>
+        <h2 style="color: aqua;">Enjoy your next gaming journey &#x25C9;&#x1F448;</h2>
+        <h2 style="color
