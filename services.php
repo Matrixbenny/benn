@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="CSS/style.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
@@ -20,31 +21,31 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>HBO MAX</td>
-                    <td>NINTENDO SWITCH</td>
-                    <td>RETURNING SHOWS</td>
+                    <td><?php echo "HBO MAX"; ?></td>
+                    <td><?php echo "NINTENDO SWITCH"; ?></td>
+                    <td><?php echo "RETURNING SHOWS"; ?></td>
                 </tr>
                 <tr>
-                    <td>NETFLIX</td>
-                    <td>PC</td>
-                    <td>NEW RELEASES</td>
+                    <td><?php echo "NETFLIX"; ?></td>
+                    <td><?php echo "PC"; ?></td>
+                    <td><?php echo "NEW RELEASES"; ?></td>
                 </tr>
                 <tr>
-                    <td>HULU</td>
-                    <td>PS5</td>
-                    <td>UPCOMING RELEASES</td>
+                    <td><?php echo "HULU"; ?></td>
+                    <td><?php echo "PS5"; ?></td>
+                    <td><?php echo "UPCOMING RELEASES"; ?></td>
                 </tr>
                 <tr>
-                    <td>PRIME VIDEO</td>
-                    <td>UPCOMING MOVIES</td>
-                    <td>NEW TVSHOWS</td>
+                    <td><?php echo "PRIME VIDEO"; ?></td>
+                    <td><?php echo "UPCOMING MOVIES"; ?></td>
+                    <td><?php echo "NEW TVSHOWS"; ?></td>
 
                 </tr>
             </tbody>
         </table>
     </center>
 
-    <script src="" async defer></script>
+    <script src=""></script>
 </body>
 
 </html>
