@@ -4,7 +4,7 @@ $username = "username";
 $password = "password";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$dbConn = new mysqli($servername, $username, $password);
 
 // Check connection
 if ($conn->connect_error) {
