@@ -1,9 +1,7 @@
 <?php
-//create PHP constants to enable connection to MySQL database
-//create constants
-//the code
-define('HOSTNAME','localhost');
-define('HOSTUSER','root');
-define('HOSTPASS','');
-define('DBNAME','webapp');
+// Define database constants
+define('HOSTNAME', 'localhost');
+define('HOSTUSER', 'root');
+define('HOSTPASS', 'mysql'); // replace with your password if you have one
+define('DBNAME', 'webapp');
 ?>

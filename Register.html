@@ -57,10 +57,12 @@
         </header>
         <br>
         <a href="index.html" style="font-size: 200%;"> 🔙</a>
-        <h1 style="padding: 8;color: rebeccapurple;">Get started with a free BENNYTORRENT account to rate, review, and
+        <h1 style="padding: 8;color: rgb(199, 185, 212);">Get started with a free BENNYTORRENT account to rate, review, and
             discover top games, movies,TV shows, and more!</h1>
         <h1>Register for an Account</h1>
-        <form action="/register" method="post">
+        <form action="processes/user_processes.php" method="post" autocomplete="off">
+            <label for="fullname">fullname:</label><br>
+            <input type="text" id="fullname" name="fullname" required><br>
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br>
 
@@ -71,9 +73,17 @@
             <input type="password" id="password" name="password" required>
             <h6>Must be at least 6 characters with 1 number and special character</h6>
             <br>
-            <label for="confirm-password">Confirm Password:</label><br>
-            <input type="password" id="confirm-password" name="confirm-password" required>
+            <label for="confirmpassword">Confirm Password:</label><br>
+            <input type="password" id="confirm-password" name="confirmpassword" required>
             <p id="confirm-password-error" class="error"></p>
+            <div>
+                <select name="usertype" required>
+                    <option value="">----Please select usertype----</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Author">Author</option>
+                    <option value="User">Member</option>
+                </select>
+            </div>
             <br>
             <button style="border-radius: 20%;"">
                 <a href=" index.html">Register</a>
