@@ -1,7 +1,3 @@
-<?php
-// PHP code to generate the HTML
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +6,7 @@
     <link rel="stylesheet" href="CSS/style.css">
 
     <title style="font-style: unset;
-    text-decoration: blue;">BENNTORRENT/Tvshows&#x1F3A5;</title>
+    text-decoration: blue;">BENNTORRENT/Tvshows🎬</title>
 </head>
 
 <body>
@@ -36,23 +32,23 @@
                     </style>
 
                     <div style="position: relative;">
-                        <button style="background-color: black;"><a href="index.html" style="color: white;">Home</a>
+                        <button style="background-color: black;"><a href="index.php" style="color: white;">Home</a>
                         </button>|
-                        <button style="background-color: black;"><a href="Games.html" style="color: white;">Games</a>
-                        </button>|<button style="background-color: black;"> <a href="Movies.html"
+                        <button style="background-color: black;"><a href="Games.php" style="color: white;">Games</a>
+                        </button>|<button style="background-color: black;"> <a href="Movies.php"
                                 style="color: white;">movies</a>
-                        </button>| <button style="background-color: black;"><a href="Tvshows.html"
+                        </button>| <button style="background-color: black;"><a href="Tvshows.php"
                                 style="color: white;">Tvshows</a>
                         </button>
 
                         <button
                             style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right:  50px;"><a
-                                href="Register.html" style="color: yellow;">Register</a>
+                                href="Register.php" style="color: yellow;">Register</a>
                         </button>|
 
                         <button
                             style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 0;"><a
-                                href="Login.html" style="color: yellow;">Login</a></button>
+                                href="Login.php" style="color: yellow;">Login</a></button>
 
                         <button class="email"
                             style="color: mediumslateblue;background-color: black;border-radius:20px; align-content: end;"><a
@@ -63,16 +59,16 @@
                 </nav>
         </header>
         <br>
-        <a href="index.html" style="font-size: 200%;"> &#x1F448;</a>
+        <a href="index.php" style="font-size: 200%;"> 🔙</a>
         <h1 style="color: darkgreen;">Tvshows</h1>
         <img src="images/tv.jpg" <br>
-        <h2 style="color: aqua;">Enjoy your next captivating Tvshows journey &#x25C9;&#x1F648;</h2>
-        <h2 style="color: cadetblue;">New Releases &#x1F196;</h2>
+        <h2 style="color: aqua;">Enjoy your next captivating Tvshows journey ◉‿◉</h2>
+        <h2 style="color: cadetblue;">New Releases 🆕 </h2>
         <img src="images/a1.webp" /> <img src="images/a2.webp" /><img src="images/a3.webp" /><img
             src="images/a4.webp" /><img src="images/a5.webp" /><img src="images/a6.webp" /><img
             src="images/a7.webp" /><img src="images/a8.webp" /><img src="images/a10.webp" /><img src="images/a9.webp" />
         <br>
-        <h2 style="color: cadetblue;">Returning shows &#x1F4FA;&#x1F37F;</h2>
+        <h2 style="color: cadetblue;">Returning shows 📺🍿</h2>
         <img src="images/a14.webp" /><img src="images/a1l.webp" /><img src="images/a12.webp" /><img
             src="images/a13.webp" /><img src="images/a15.webp" /><img src="images/a16.webp" /><img
             src="images/a17.webp" />
@@ -80,4 +76,28 @@
         <img src="images/a20.webp" /><img src="images/a21.webp" /><img src="images/a22.webp" /><img
             src="images/a22.webp" /><img src="images/a23.webp" /><img src="images/a24.webp" /><img
             src="images/a25.webp" /><img src="images/a26.webp" />
-        <
+        <br>
+
+        <h2>
+            <b>
+                <center>
+                    OVERVIEW
+                </center>
+            </b>
+        </h2>
+        <footer>
+            <div class="links-container">
+
+                <a href="helpcentre.php">Help centre</a>
+                <br>
+                <a href="carrers.php">Carrers</a>
+                <br>
+                <a href="termsofuse.php">Terms of use</a>
+                <br>
+                <a href="privacypolicy.php">Privacy Policy</a>
+            </div>
+        </footer>
+
+</body>
+
+</html>

@@ -1,57 +1,51 @@
-<?php
-// index.php
+<!DOCTYPE html>
+<html>
 
-// Define the data for the table
-$data = array(
-    array("HBO MAX", "NINTENDO SWITCH", "RETURNING SHOWS"),
-    array("NETFLIX", "PC", "NEW RELEASES"),
-    array("HULU", "PS5", "UPCOMING RELEASES"),
-    array("PRIME VIDEO", "UPCOMING MOVIES", "NEW TVSHOWS")
-);
+<head>
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+</head>
+<a href="index.php" style="font-size: 200%;"> 🔙</a>
 
-// Start the HTML document
-echo '<!DOCTYPE html>';
-echo '<html>';
+<body>
+    <center>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>MOVIES</th>
+                    <th>GAMES</th>
+                    <th>TVSHOWS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HBO MAX</td>
+                    <td>NINTENDO SWITCH</td>
+                    <td>RETURNING SHOWS</td>
+                </tr>
+                <tr>
+                    <td>NETFLIX</td>
+                    <td>PC</td>
+                    <td>NEW RELEASES</td>
+                </tr>
+                <tr>
+                    <td>HULU</td>
+                    <td>PS5</td>
+                    <td>UPCOMING RELEASES</td>
+                </tr>
+                <tr>
+                    <td>PRIME VIDEO</td>
+                    <td>UPCOMING MOVIES</td>
+                    <td>NEW TVSHOWS</td>
 
-// Head section
-echo '<head>';
-echo '<link rel="stylesheet" href="CSS/style.css">';
-echo '<meta charset="utf-8">';
-echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-echo '<title>Entertainment Hub</title>'; // Add a title to the page
-echo '</head>';
+                </tr>
+            </tbody>
+        </table>
+    </center>
 
-// Back to index link
-echo '<a href="index.html" style="font-size: 200%;"> 🔙</a>';
+    <script src="" async defer></script>
+</body>
 
-// Body section
-echo '<body>';
-echo '<center>';
-echo '<table border="1">';
-echo '<thead>';
-echo '<tr>';
-echo '<th>MOVIES</th>';
-echo '<th>GAMES</th>';
-echo '<th>TVSHOWS</th>';
-echo '</tr>';
-echo '</thead>';
-echo '<tbody>';
-
-// Loop through the data and generate the table rows
-foreach ($data as $row) {
-    echo '<tr>';
-    echo '<td>' . $row[0] . '</td>';
-    echo '<td>' . $row[1] . '</td>';
-    echo '<td>' . $row[2] . '</td>';
-    echo '</tr>';
-}
-
-echo '</tbody>';
-echo '</table>';
-echo '</center>';
-
-// Script tag (no src attribute, so it won't load any script)
-echo '<script src="" async defer></script>';
-
-echo '</body>';
-echo '</html>';
+</html>

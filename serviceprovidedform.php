@@ -1,54 +1,64 @@
-<?php
-// Check if the form has been submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Get the form data
-  $name = $_POST["name"];
-  $description = $_POST["description"];
-  $category = $_POST["category"];
-  $price = $_POST["price"];
-  $quantity = $_POST["quantity"];
-
-  // Validate the form data
-  $errors = array();
-  if (empty($name)) {
-    $errors[] = "Name is required";
-  }
-  if (empty($description)) {
-    $errors[] = "Description is required";
-  }
-  if (empty($category)) {
-    $errors[] = "Category is required";
-  }
-  if (empty($price) ||!is_numeric($price)) {
-    $errors[] = "Price is required and must be a number";
-  }
-  if (empty($quantity) ||!is_numeric($quantity)) {
-    $errors[] = "Quantity is required and must be a number";
-  }
-
-  // If there are errors, display them
-  if (!empty($errors)) {
-    echo "<ul>";
-    foreach ($errors as $error) {
-      echo "<li>$error</li>";
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Goods or Service Details Form</title>
+  <style>
+    /* Add some basic styling to make the form look decent */
+    body {
+      font-family: Arial, sans-serif;
     }
-    echo "</ul>";
-  } else {
-    // If no errors, process the form data
-    // You can insert the data into a database or perform any other action here
-    echo "Form data submitted successfully!";
-    // For example, let's insert the data into a MySQL database
-    $conn = mysqli_connect("localhost", "username", "password", "database");
-    if (!$conn) {
-      die("Connection failed: ". mysqli_connect_error());
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    $sql = "INSERT INTO goods_or_services (name, description, category, price, quantity) VALUES ('$name', '$description', '$category', $price, $quantity)";
-    if (mysqli_query($conn, $sql)) {
-      echo "New record created successfully";
-    } else {
-      echo "Error: ". $sql. "<br>". mysqli_error($conn);
+    label {
+      display: block;
+      margin-bottom: 10px;
     }
-    mysqli_close($conn);
-  }
-}
-?>
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <h1>Goods or Service Details Form</h1>
+  <form>
+    <h2>Goods or Service Details</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"></textarea><br><br>
+    <label for="category">Category:</label>
+    <select id="category" name="category">
+      <option value="">Select a category</option>
+      <option value="electronics">Electronics</option>
+      <option value="furniture">Furniture</option>
+      <option value="clothing">Clothing</option>
+      <option value="others">Others</option>
+    </select><br><br>
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price"><br><br>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

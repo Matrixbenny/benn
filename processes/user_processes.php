@@ -32,4 +32,12 @@ $user_insert = "INSERT INTO user's(fullname, username, email, password,usertype 
     die("Failed to insert the new record" . $dbConn->error);
  }
 }
+//signin processes
+if (isset($_POST["signup"])){
+    //Variable declaration
+$fullname = mysqli_real_escape_string($dbConn,$_POST["fullname"]);
+$email = mysqli_real_escape_string($dbConn,$_POST["email"]);
+$username = mysqli_real_escape_string($dbConn,$_POST["username"]);
+$password = mysqli_real_escape_string($dbConn,$_POST["password"]);
+
 ?>
