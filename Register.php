@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 
+    <?php
+    require_once("includes/connection.php")
+    ?>
+
 <head>
     <link rel="stylesheet" href="CSS/style.css">
     <title>Registration Form</title>
