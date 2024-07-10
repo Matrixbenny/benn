@@ -48,13 +48,13 @@
     <footer>
         <div class="links-container">
 
-            <a href="helpcentre.html">Help centre</a>
+            <a href="helpcentre.php">Help centre</a>
             <br>
-            <a href="carrers.html">Carrers</a>
+            <a href="carrers.php">Carrers</a>
             <br>
-            <a href="termsofuse.html">Terms of use</a>
+            <a href="termsofuse.php">Terms of use</a>
             <br>
-            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="privacypolicy.php">Privacy Policy</a>
         </div>
     </footer>
 </body>

@@ -50,7 +50,7 @@
 </head>
 
 <body>
-    <a href="index.html" style="font-size: 200%;"> 🔙</a>
+    <a href="index.php" style="font-size: 200%;"> 🔙</a>
     <form action="/submit" method="post">
         <label for="movie">Movie:</label>
         <input type="text" id="movie" name="movie" required>

@@ -29,23 +29,23 @@
                     </style>
 
                     <div style="position: relative;">
-                        <button style="background-color: black;"><a href="index.html" style="color: white;">Home</a>
+                        <button style="background-color: black;"><a href="index.php" style="color: white;">Home</a>
                         </button>|
-                        <button style="background-color: black;"><a href="Games.html" style="color: white;">Games</a>
-                        </button>|<button style="background-color: black;"> <a href="Movies.html"
+                        <button style="background-color: black;"><a href="Games.php" style="color: white;">Games</a>
+                        </button>|<button style="background-color: black;"> <a href="Movies.php"
                                 style="color: white;">movies</a>
-                        </button>| <button style="background-color: black;"><a href="Tvshows.html"
+                        </button>| <button style="background-color: black;"><a href="Tvshows.php"
                                 style="color: white;">Tvshows</a>
                         </button>
 
                         <button
                             style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right:  50px;"><a
-                                href="Register.html" style="color: yellow;">Register</a>
+                                href="Register.php" style="color: yellow;">Register</a>
                         </button>|
 
                         <button
                             style="background-color: darkmagenta; border-radius:20px;position: absolute;top: 0;right: 0;"><a
-                                href="Login.html" style="color: yellow;">Login</a></button>
+                                href="Login.php" style="color: yellow;">Login</a></button>
 
                         <button class="email"
                             style="color: mediumslateblue;background-color: black;border-radius:20px; align-content: end;"><a
@@ -54,7 +54,7 @@
                     </div>
                 </nav>
         </header>
-        <a href="index.html" style="font-size: 200%;"> 🔙</a>
+        <a href="index.php" style="font-size: 200%;"> 🔙</a>
         <h1 style="padding: 10;color: olive;">👋Welcome back!</h1>
         <h1>Login</h1>
         <form action="/login" method="post">
@@ -68,19 +68,19 @@
             <input type="submit" value="Login">
         </form>
         <p>
-            <a href="forgot password.html">Forgot Password?</a>
+            <a href="forgot password.php">Forgot Password?</a>
         </p>
         <br>
         <footer>
             <div class="links-container">
 
-                <a href="helpcentre.html">Help centre</a>
+                <a href="helpcentre.php">Help centre</a>
                 <br>
-                <a href="carrers.html">Carrers</a>
+                <a href="carrers.php">Carrers</a>
                 <br>
-                <a href="termsofuse.html">Terms of use</a>
+                <a href="termsofuse.php">Terms of use</a>
                 <br>
-                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="privacypolicy.php">Privacy Policy</a>
             </div>
         </footer>>
 

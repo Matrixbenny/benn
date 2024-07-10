@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
 </head>
-<a href="index.html" style="font-size: 200%;"> 🔙</a>
+<a href="index.php" style="font-size: 200%;"> 🔙</a>
 
 <body>
     <center>
