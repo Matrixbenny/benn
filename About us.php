@@ -57,14 +57,12 @@
                 </style>
 
                 <div style="position: relative;">
-                    <button style="background-color: black;"><a href="index.php" style="color: white;">Home</a>
+                    <button style="background-color: black;"><a href="index.html" style="color: white;">Home</a>
                     </button>|
-                    <button style="background-color: black;"><a href="Games.php" style="color: white;">Games</a>
-                    <button style="background-color: black;"><a href="Games." style="color: white;">Games</a>
-                    </button>|<button style="background-color: black;"> <a href="Movies."
+                    <button style="background-color: black;"><a href="Games.html" style="color: white;">Games</a>
+                    </button>|<button style="background-color: black;"> <a href="Movies.html"
                             style="color: white;">movies</a>
-                    <button style="background-color: black;"><a href="Games." style="color: white;">Games</a>
-                    </button>| <button style="background-color: black;"><a href="Tvshows.h"
+                    </button>| <button style="background-color: black;"><a href="Tvshows.html"
                             style="color: white;">Tvshows</a>
                     </button>
 
@@ -121,8 +119,7 @@
                 <td>
                     Movies
                 </td>
-                <td> Tvshows 
-            </td>
+                <td Tvshows </td>
             </tr>
 
         </tbody>
@@ -130,15 +127,13 @@
     <footer>
         <div class="links-container">
 
-                    <button style="background-color: black;"><a href="Games." style="color: white;">Games</a>
-                    <button style="background-color: black;"><a href="Games." style="color: white;">Games</a>
-            <a href="helpcentre.php">Help centre</a>
+            <a href="helpcentre.html">Help centre</a>
             <br>
-            <a href="carrers.php">Carrers</a>
+            <a href="carrers.html">Carrers</a>
             <br>
-            <a href="termsofuse.php">Terms of use</a>
+            <a href="termsofuse.html">Terms of use</a>
             <br>
-            <a href="privacypolicy.hphp">Privacy Policy</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
         </div>
     </footer>
 
