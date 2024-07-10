@@ -10,7 +10,7 @@
     <title style="font-style: unset;
     text-decoration: blue;">BENNYTORRENT🎮🕹️👾</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/scss">
 
     <style>
         video {
