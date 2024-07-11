@@ -21,12 +21,13 @@
         
         //Verify the entered password with the retrieved hashed password
         if (password_verify($password, $hashed_password)) {
-            // Password is correct, so start a new session
-            session_start();
-            $_SESSION['username'] = $username;
-            // Redirect user to the dashboard or any authorized page
-            header("Location: dashboard.php");
-            exit();
+    // Password is correct, so start a new session
+    session_start();
+    $_SESSION['username'] = $username;
+    // Redirect user to the index page or any authorized page
+    header("Location: index.php");
+    exit();
+}
         } else {
             // Incorrect password
             header("Location: ../Login.php?error=incorrect_password");
