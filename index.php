@@ -26,7 +26,7 @@
     <header>
         <header>
             <img src="images/LOGO.png" alt="Header Image" class="header-image">
-            <!-- Your header content here -->
+            
         </header>
         <nav>
             <audio id="myAudio" controls loop>

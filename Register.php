@@ -17,7 +17,7 @@
                 <summary class="dropdown-toggle"><span class="menu-icon"></span> Menu</summary>
                 <header>
                     <img src="images/LOGO.png" alt="Header Image" class="header-image">
-                    <!-- Your header content here -->
+                   
                 </header>
                 <nav>
                     <audio id="myAudio" controls loop>
@@ -89,9 +89,6 @@
                 </select>
             </div>
             <br>
-            <!-- <button style="border-radius: 20%;"">
-                <a href=" index.php">Register</a>
-            </button> -->
             <input type="submit" name ="register">Register</input>
             <h6>By joining BENNYTORRENT, you agree to Bennytorrent's Terms of Use and Privacy Policy.</h6>
         </form>

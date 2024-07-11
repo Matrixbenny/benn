@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
-        /* Add some basic styles to make it look better */
+       
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
