@@ -89,9 +89,10 @@
                 </select>
             </div>
             <br>
-            <button style="border-radius: 20%;"">
+            <!-- <button style="border-radius: 20%;"">
                 <a href=" index.php">Register</a>
-            </button>
+            </button> -->
+            <input type="submit" name ="register">Register</input>
             <h6>By joining BENNYTORRENT, you agree to Bennytorrent's Terms of Use and Privacy Policy.</h6>
         </form>
         <footer>
